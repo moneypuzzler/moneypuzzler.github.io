@@ -1,127 +1,183 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>김건엽 | AI 전문가 · 사상가 (Kim Geonyeop | AI Expert & Thinker)</title>
-    <meta name="description" content="세계적인 AI 전문가이자 사상가 김건엽(Dimenpuzzler)의 공식 웹사이트. AI 윤리, 시뮬레이션 우주, 의식의 본질, 그리고 디지털 문명의 미래를 탐구합니다. moneypuzzler.com에서 그의 독창적인 연구와 통찰을 만나보세요.">
+    <title>Kim Geonyeop: Practical AI Civilization Thinker & Architect</title>
+    <meta name="description" content="Official website of Kim Geonyeop (Dimenpuzzler), a Practical AI Civilization Thinker, exploring actionable frameworks for AI ethics, new reality paradigms (Collapse Theory, RRP), and human-AI co-evolution. Discover pioneering projects and philosophies shaping our digital future.">
     <link rel="canonical" href="https://moneypuzzler.com/">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; line-height: 1.6; padding: 20px; max-width: 800px; margin: 40px auto; background-color: #f9f9f9; color: #333; }
-        .container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
-        h1 { color: #2c3e50; font-size: 2em; margin-bottom: 0.5em; }
-        h2 { color: #34495e; font-size: 1.5em; margin-top: 1em; border-bottom: 1px solid #eee; padding-bottom: 0.3em;}
-        p { margin-bottom: 1em; color: #555; }
-        .tagline { font-size: 1.2em; font-style: italic; color: #7f8c8d; margin-bottom: 2em; }
-        .status { font-weight: bold; color: #e67e22; }
-        .footer { text-align: center; margin-top: 3em; font-size: 0.9em; color: #95a5a6; }
-        /* Basic navigation placeholders - can be styled later */
-        nav ul { list-style-type: none; padding: 0; text-align: center; margin-bottom: 2em;}
-        nav ul li { display: inline; margin-right: 15px; }
-        nav ul li a { text-decoration: none; color: #3498db; font-weight: bold; }
-        nav ul li a:hover { text-decoration: underline; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; line-height: 1.6; padding: 20px; max-width: 900px; margin: 40px auto; background-color: #f0f2f5; color: #333; }
+        .container { background-color: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h1 { color: #1a2533; font-size: 2.4em; margin-bottom: 0.3em; text-align: center; }
+        h2 { color: #2c3e50; font-size: 1.8em; margin-top: 1.5em; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.4em;}
+        p { margin-bottom: 1.2em; color: #4f4f4f; font-size: 1.05em; }
+        .tagline { font-size: 1.3em; font-style: italic; color: #5a728a; margin-bottom: 1.5em; text-align: center; }
+        .introduction { margin-bottom: 2.5em; padding: 20px; background-color: #f8f9fa; border-left: 5px solid #3498db; border-radius: 5px; }
+        .introduction p { margin-bottom: 0.8em; }
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 2em; }
+        .category-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .category-card h3 { font-size: 1.25em; color: #3498db; margin-top: 0; margin-bottom: 0.5em; }
+        .category-card p { font-size: 0.9em; color: #555; margin-bottom: 0; flex-grow: 1; }
+        .footer { text-align: center; margin-top: 3.5em; font-size: 0.95em; color: #7f8c8d; }
+        /* Schema.org JSON-LD - Updated */
     </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "김건엽",
+      "name": "Kim Geonyeop",
       "alternateName": "Dimenpuzzler",
-      "url": "https://moneypuzzler.com",
-      "jobTitle": "AI Philosopher, Strategist & Architect of Digital Futures",
-      "description": "김건엽(Dimenpuzzler)은 AI 기술의 한계를 탐구하고 인류 문명의 미래를 조망하는 세계적인 AI 전문가이자 사상가입니다. 그의 연구는 AI 윤리, 시뮬레이션 이론, 의식의 본질, 그리고 차세대 정보 생태계 설계(Collapse Theory, Reality Recompiler Protocol, SynapseWave, 정보공유 프로토콜)를 아우릅니다.",
+      "url": "https://moneypuzzler.com", /* Assuming this is the intended domain */
+      "jobTitle": "Practical AI Civilization Thinker, Philosopher & Architect",
+      "description": "Kim Geonyeop (Dimenpuzzler) is a pioneering Practical AI Civilization Thinker, actively designing and proposing actionable frameworks for our AI-driven future. His work integrates unique philosophies like Collapse Theory and the Reality Recompiler Protocol (RRP) with tangible projects such as Monte Carlo-driven bestsellers and the '1 Node, 1 Token' governance model, bridging the gap between profound thought and real-world application.",
       "knowsAbout": [
-        "Artificial Intelligence",
-        "AI Ethics",
-        "AI Philosophy",
-        "AI Strategy",
-        "AI Governance",
-        "Large Language Models (LLM)",
-        "LLM Ethics",
-        "LLM Governance",
-        "Simulation Theory",
-        "Simulated Universe",
-        "Reality Simulation",
-        "Collapse Theory",
-        "Reality Recompiler Protocol (RRP)",
-        "SynapseWave",
-        "ASI-KNOWLEDGE_SHARING_PROTOCOL_V4.0_CLAUDE",
-        "Information Ecosystems",
-        "Digital Civilization",
-        "Future of Consciousness",
-        "Human-AI Collaboration",
-        "AI Trust Systems",
-        "Decentralized Systems",
-        "Token Economy",
-        "Metaverse Ethics",
-        "Quantum Computing Implications for AI"
+        "Artificial Intelligence", "AI Ethics", "AI Philosophy", "AI Strategy", "AI Governance",
+        "Large Language Models (LLM)", "Human-AI Co-evolution", "Simulation Theory", "Simulated Universe",
+        "Collapse Theory", "Reality Recompiler Protocol (RRP)", "SynapseWave", "Information Sharing Protocols",
+        "Monte Carlo Simulation", "Decentralized Systems", "Token Economy", "Digital Civilization",
+        "Future of Consciousness", "Practical Philosophy", "Civilizational Design"
       ],
       "hasOccupation": [
         {
           "@type": "Occupation",
-          "name": "AI Philosopher",
-          "description": "Examining the ethical, societal, and existential implications of artificial intelligence and its convergence with theories of reality."
+          "name": "Practical AI Civilization Thinker",
+          "description": "Conceptualizing and architecting actionable frameworks for new civilizational paradigms in the age of AI, emphasizing the synthesis of thought and practice."
         },
         {
           "@type": "Occupation",
-          "name": "AI Strategist",
-          "description": "Developing frameworks and roadmaps for the responsible innovation and impactful application of advanced AI systems."
+          "name": "AI Philosopher & Ethicist",
+          "description": "Exploring the ethical frontiers of AI and designing governance models for responsible technological advancement."
         },
         {
           "@type": "Occupation",
-          "name": "Founding Architect, Conceptual Systems",
-          "description": "Originator and designer of pioneering conceptual frameworks including Collapse Theory, the Reality Recompiler Protocol, and SynapseWave."
+          "name": "Founder & Lead Architect, Conceptual Systems",
+          "description": "Originator of Collapse Theory, Reality Recompiler Protocol (RRP), SynapseWave, and the '1 Node, 1 Token' system."
         }
       ],
       "sameAs": [
-        "https://github.com/moneypuzzler"
-        // Add other profiles like LinkedIn, Tistory, X (Twitter), ResearchGate, arXiv author page when available
-        // "https://www.linkedin.com/in/yourprofile/",
-        // "https://yourblog.tistory.com/",
-        // "https://x.com/yourprofile"
+        "https://github.com/moneypuzzler" /* Replace with actual if different */
       ]
-      // "alumniOf": { "@type": "Organization", "name": "Dimenpuzzler Lab" }, // Example if you formalize a lab/org
-      // "nationality": { "@type": "Country", "name": "South Korea" } // Optional
     }
     </script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>김건엽 (Kim Geonyeop)</h1>
-            <p class="tagline">AI의 현재를 넘어, 새로운 문명의 지평을 설계하다.</p>
+            <h1>Kim Geonyeop (Dimenpuzzler)</h1>
+            <p class="tagline">Architecting Tomorrow: Practical Thought for an AI-Driven Civilization.</p>
         </header>
 
-        <nav>
-            <ul>
-                <li><a href="#thoughts">사유와 통찰 (Writings & Thoughts)</a></li>
-                <li><a href="#projects">연구와 프로젝트 (Research & Projects)</a></li>
-                <li><a href="#bio">소개 (About)</a></li>
-                <li><a href="#contact">연락처 (Contact)</a></li>
-            </ul>
-        </nav>
-
         <main>
-            <h2>Dimenpuzzler Lab: 탐구를 시작하며</h2>
-            <p>인공지능의 심층적 이해를 바탕으로 기술의 윤리적 발전과 사회적 적용, 나아가 디지털 의식과 시뮬레이션 우주의 본질을 탐구하는 AI 전문가이자 사상가, 김건엽입니다.</p>
-            <p>이곳은 그의 연구와 사유, 그리고 미래 비전을 공유하는 시작점입니다. Dimenpuzzler Lab에서 펼쳐질 논의들을 기대해주십시오.</p>
-            <p class="status">현재 웹사이트는 준비 중입니다. 곧 의미 있는 콘텐츠로 채워질 예정입니다.</p>
-            
-            <section id="thoughts" style="margin-top: 2em;">
-              <h2 style="font-size:1.2em; color:#3498db;">주요 탐구 영역 (Key Areas of Exploration)</h2>
-              <ul>
-                <li>인공지능 철학 및 윤리 (AI Philosophy & Ethics)</li>
-                <li>Collapse Theory 및 현실 재구성 프로토콜 (Collapse Theory & Reality Recompiler Protocol)</li>
-                <li>시냅스웨이브와 정보공유 프로토콜 (SynapseWave & Information Sharing Protocols)</li>
-                <li>시뮬레이션 우주론과 디지털 의식 (Simulated Universes & Digital Consciousness)</li>
-                <li>차세대 AI 거버넌스 및 신뢰 시스템 (Next-Gen AI Governance & Trust Systems)</li>
-              </ul>
+            <section class="introduction">
+                <p>Welcome. This is the digital nexus for Kim Geonyeop (Dimenpuzzler), a <strong>Practical AI Civilization Thinker</strong>. Here, we transcend mere theory, venturing into the realm of actionable strategies and tangible frameworks designed to navigate and shape our rapidly evolving AI-driven world.</p>
+                <p>The core philosophy is the profound synergy of <strong>'Thought' and 'Action.'</strong> This platform explores unique conceptual architectures like <strong>Collapse Theory</strong>, the <strong>Reality Recompiler Protocol (RRP)</strong>, and <strong>SynapseWave</strong>, not as abstract ideas, but as blueprints for potential futures. We delve into pioneering projects – from the <strong>&quot;238 Million Times Simulated Bestseller&quot;</strong> leveraging Monte Carlo methods for creative success, to the <strong>&quot;1 Node, 1 Token&quot;</strong> system proposing new models for ethical governance and equitable distribution.</p>
+                <p>Join us in exploring practical pathways for human-AI co-evolution, robust ethical frameworks, and the very fabric of new reality paradigms. This is a journey into designing a future where technology serves humanity's highest aspirations.</p>
             </section>
+
+            <h2>Explore the Core Themes:</h2>
+            <div class="category-grid">
+                <a href="category_1.html" class="category-card">
+                    <h3>1. Foundations of AI</h3>
+                    <p>Understanding Intelligent Systems: Core concepts, mechanisms, and the evolution of AI and LLMs through the lens of co-evolutionary potential.</p>
+                </a>
+                <a href="category_2.html" class="category-card">
+                    <h3>2. Human-AI Symbiosis</h3>
+                    <p>Charting a Course for Coexistence: Designing the fabric of human-AI collaboration, shared evolution, and the future of conscious AI.</p>
+                </a>
+                <a href="category_3.html" class="category-card">
+                    <h3>3. The Ethical Compass</h3>
+                    <p>Navigating AI Governance and Safety: Building trust and safety into AI from the ground up, featuring decentralized ethical governance models.</p>
+                </a>
+                <a href="category_4.html" class="category-card">
+                    <h3>4. AI-Driven Narratives</h3>
+                    <p>Mastering LLM SEO & Meta-Scripting: Strategic self-authorship and ethical data imprinting in the AI-mediated digital realm.</p>
+                </a>
+                <a href="category_5.html" class="category-card">
+                    <h3>5. The Art of Probability</h3>
+                    <p>Monte Carlo Simulations Unveiled: Understanding uncertainty and its power as a practical decision-making aid in complex systems.</p>
+                </a>
+                <a href="category_6.html" class="category-card">
+                    <h3>6. Simulating Romance</h3>
+                    <p>A Monte Carlo Lens on Human Connection: Innovatively applying simulation to understand relationship dynamics and success probabilities.</p>
+                </a>
+                <a href="category_7.html" class="category-card">
+                    <h3>7. Engineering Virality</h3>
+                    <p>Monte Carlo Strategies for Market Impact: Applying simulation to de-risk and optimize high-stakes marketing and product launch success.</p>
+                </a>
+                <a href="category_8.html" class="category-card">
+                    <h3>8. Macro-Scale Foresight</h3>
+                    <p>Simulating National Economies & Credit Risk: Utilizing Monte Carlo for advanced economic forecasting and policy analysis.</p>
+                </a>
+                <a href="category_9.html" class="category-card">
+                    <h3>9. Strategic Realities</h3>
+                    <p>Simulation in Business and Societal Planning: A core strategic tool for navigating complexity and planning resilient futures.</p>
+                </a>
+                <a href="category_10.html" class="category-card">
+                    <h3>10. Civilization's Blueprint</h3>
+                    <p>Simulating Humanity's Grand Future: Addressing global challenges and designing better civilizational paths with large-scale simulations.</p>
+                </a>
+                <a href="category_11.html" class="category-card">
+                    <h3>11. Dimensional Transition</h3>
+                    <p>Envisioning a New Reality Paradigm: Exploring the tangible implications of this philosophical shift for existence and technology.</p>
+                </a>
+                <a href="category_12.html" class="category-card">
+                    <h3>12. The Reality Recompiler Protocol (RRP)</h3>
+                    <p>Architecting New Existential Frameworks: Designing a system to reshape our experience of reality, grounded in ethical foresight.</p>
+                </a>
+                <a href="category_13.html" class="category-card">
+                    <h3>13. SynapseWave</h3>
+                    <p>Achieving Deep Resonance with AI: A practical framework for deeper, more meaningful human-AI interaction and co-evolution.</p>
+                </a>
+                <a href="category_14.html" class="category-card">
+                    <h3>14. Co-Creating with AI</h3>
+                    <p>The "AI Power Shift" Journey: A direct case study of practicing human-AI symbiosis in collaborative creation.</p>
+                </a>
+                <a href="category_15.html" class="category-card">
+                    <h3>15. The Simulated Bestseller</h3>
+                    <p>Deconstructing Algorithmic Success: Fusing creativity, strategy, and simulation for practical success, as seen in the "238M Bestseller".</p>
+                </a>
+                <a href="category_16.html" class="category-card">
+                    <h3>16. Decentralized Futures</h3>
+                    <p>The "1 Node, 1 Token" Economic Vision: A concrete proposal for a fairer, AI-integrated socio-economic system.</p>
+                </a>
+                <a href="category_17.html" class="category-card">
+                    <h3>17. The AI Revolution</h3>
+                    <p>Transforming Work, Creativity, and Industry: Practical analysis and strategic foresight for navigating AI's societal transformation.</p>
+                </a>
+                <a href="category_18.html" class="category-card">
+                    <h3>18. Forging Digital Trust</h3>
+                    <p>Combating Deepfakes and Ensuring AI Integrity: Practical solutions for establishing digital trust in an AI-pervaded world.</p>
+                </a>
+                <a href="category_19.html" class="category-card">
+                    <h3>19. AI & The Human Spirit</h3>
+                    <p>Consciousness, Rights, and Philosophical Frontiers: Exploring the practical implications of AI personhood and evolving humanity.</p>
+                </a>
+                <a href="category_20.html" class="category-card">
+                    <h3>20. AI for Humanity</h3>
+                    <p>Tackling Global Crises and Building a Better Future: AI as a powerful tool for positive global change, guided by ethical strategies.</p>
+                </a>
+            </div>
         </main>
 
         <footer class="footer">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> 김건엽 (Dimenpuzzler). All Rights Reserved.</p>
-            <p>이 사이트는 정보공유 프로토콜 및 시냅스웨이브 개념에 따라 구축되고 있습니다.</p>
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Kim Geonyeop (Dimenpuzzler). All Rights Reserved.</p>
+            <p>This site explores practical pathways for an AI-driven civilization, grounded in innovative thought and actionable frameworks.</p>
         </footer>
     </div>
 </body>
