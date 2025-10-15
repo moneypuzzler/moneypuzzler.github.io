@@ -3,89 +3,298 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI for Humanity: Tackling Global Crises and Building a Better Future | Kim Geonyeop: Practical AI Civilization Thinker</title>
-    <meta name="description" content="Explore AI for Humanity: Tackling Global Crises and Building a Better Future with Kim Geonyeop, focusing on AI as a *powerful tool for positive global change, guided by ethical principles and practical strategies*. Delve into practical applications and future-oriented insights.">
+    <title>Field Notes &amp; Experiments | Kim Geonyeob</title>
+    <meta name="description" content="Read field notes from Kim Geonyeob: prototypes, experiments, and tactical learnings from the lab.">
     <link rel="canonical" href="https://moneypuzzler.com/category_20.html">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; line-height: 1.6; padding: 20px; max-width: 900px; margin: 40px auto; background-color: #f0f2f5; color: #333; }
-        .container { background-color: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        header { margin-bottom: 2em; }
-        h1 { color: #1a2533; font-size: 2.2em; margin-bottom: 0.2em; }
-        h2 { color: #2c3e50; font-size: 1.7em; margin-top: 1.5em; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.3em;}
-        p { margin-bottom: 1.2em; color: #4f4f4f; font-size: 1.05em; }
-        .tagline { font-size: 1.2em; font-style: italic; color: #5a728a; margin-bottom: 1em; }
-        .back-link { display: inline-block; margin-bottom: 1.5em; color: #3498db; text-decoration: none; font-weight: bold; }
-        .back-link:hover { text-decoration: underline; }
-        .introduction, .content-guidance, .posts-placeholder { margin-bottom: 2.5em; padding: 20px; background-color: #f8f9fa; border-left: 5px solid #3498db; border-radius: 5px; }
-        .introduction p, .content-guidance p, .posts-placeholder p { margin-bottom: 0.8em; }
-        .content-guidance ul { list-style-type: disc; margin-left: 20px; }
-        .content-guidance ul li { margin-bottom: 0.5em; }
-        .footer { text-align: center; margin-top: 3.5em; font-size: 0.95em; color: #7f8c8d; }
+        :root {
+            color-scheme: dark;
+            --bg-deep: #020617;
+            --bg-mid: #0b1220;
+            --bg-soft: rgba(15, 23, 42, 0.68);
+            --panel: rgba(15, 23, 42, 0.82);
+            --panel-strong: rgba(30, 41, 59, 0.9);
+            --accent: #38bdf8;
+            --accent-soft: rgba(56, 189, 248, 0.24);
+            --accent-secondary: #a855f7;
+            --text-strong: #f8fafc;
+            --text-muted: #cbd5f5;
+            --border: rgba(56, 189, 248, 0.18);
+            --shadow: 0 30px 80px rgba(2, 6, 23, 0.55);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', 'Spoqa Han Sans Neo', 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: clamp(44px, 7vw, 84px) 22px;
+            background:
+                radial-gradient(1200px at 5% 5%, rgba(168, 85, 247, 0.18), transparent 55%),
+                radial-gradient(900px at 95% 10%, rgba(56, 189, 248, 0.28), transparent 60%),
+                linear-gradient(180deg, var(--bg-deep) 0%, #0f172a 100%);
+            color: var(--text-strong);
+        }
+
+        .container {
+            width: min(100%, 960px);
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.86), rgba(15, 23, 42, 0.72));
+            border-radius: 32px;
+            padding: clamp(38px, 6vw, 70px);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(22px);
+        }
+
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            border-radius: inherit;
+            filter: blur(0);
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        .container::before {
+            inset: -20% 40% 30% -10%;
+            background: radial-gradient(520px at 20% 35%, rgba(56, 189, 248, 0.3), transparent 70%);
+            opacity: 0.7;
+        }
+
+        .container::after {
+            inset: 45% -15% -20% 40%;
+            background: radial-gradient(460px at 50% 50%, rgba(168, 85, 247, 0.32), transparent 75%);
+            opacity: 0.6;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(30px, 4vw, 44px);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--text-strong);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+        }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+            background: rgba(56, 189, 248, 0.22);
+            box-shadow: 0 22px 46px rgba(14, 116, 144, 0.45);
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .page-eyebrow {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 18px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.3rem, 4.8vw, 3.1rem);
+            line-height: 1.1;
+            background: linear-gradient(120deg, #e0f2fe, #c084fc 60%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tagline {
+            margin: 0;
+            font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+            color: var(--text-muted);
+            line-height: 1.65;
+            max-width: 720px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: clamp(22px, 3vw, 32px);
+        }
+
+        .section-card {
+            position: relative;
+            background: var(--panel);
+            border-radius: 26px;
+            border: 1px solid rgba(56, 189, 248, 0.16);
+            padding: clamp(24px, 4vw, 34px);
+            box-shadow: 0 18px 44px rgba(2, 6, 23, 0.55);
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            inset: -40% 40% 40% -40%;
+            background: radial-gradient(520px at 30% 30%, rgba(56, 189, 248, 0.22), transparent 70%);
+            opacity: 0.7;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .section-card:hover::before {
+            transform: scale(1.08) translate(8px, -6px);
+            opacity: 0.85;
+        }
+
+        .section-card h2 {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 18px;
+            font-size: clamp(1.55rem, 3vw, 1.9rem);
+            color: var(--text-strong);
+        }
+
+        .section-card p,
+        .section-card li {
+            position: relative;
+            z-index: 1;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1.02rem;
+        }
+
+        .section-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-list {
+            margin: 0 0 1.4em;
+            padding-left: 1.1em;
+        }
+
+        .highlight-list li {
+            margin-bottom: 0.65em;
+        }
+
+        .highlight-list li::marker {
+            color: var(--accent);
+        }
+
+        .connections {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .placeholder {
+            background: var(--panel-strong);
+            border-style: dashed;
+            border-color: rgba(148, 163, 184, 0.35);
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.95rem;
+            color: rgba(226, 232, 240, 0.75);
+            text-align: left;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer strong {
+            color: var(--text-strong);
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding: 28px 18px 48px;
+            }
+
+            .container {
+                border-radius: 26px;
+                padding: 30px 22px 42px;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <a href="index.html" class="back-link">&larr; Back to Main Page (Kim Geonyeop: Practical AI Civilization Thinker)</a>
-            <h1>AI for Humanity: Tackling Global Crises and Building a Better Future</h1>
-            <p class="tagline">Showcasing AI's potential in addressing critical global issues, from climate change to social justice, including initiatives like the "Grand Purification Project".*</p>
-        </header>
-        <main>
-            <section class="introduction">
-                <h2>Embracing Practical Thought: AI for Humanity: Tackling Global Crises and Building a Better Future</h2>
-                <p>AI as a *powerful tool for positive global change, guided by ethical principles and practical strategies*. The user showcases a commitment to leveraging technology for the greater good, exemplified by ambitious initiatives like the "Grand Purification Project."
-*   **Key Content Areas/Potential Post Topics:**
-    *   "AI as a Force for Good: Practical Applications in Solving Humanity's Biggest Challenges."
-    *   "The Grand Purification Project: A Bold Vision for AI-Driven Global Problem-Solving – Feasibility and Ethics."
-    *   "From Code to Climate Action: How AI Can Help Build a Sustainable and Just Future."
-*   **Connections:** Links to Ethical Compass, Civilization's Blueprint, Decentralized Futures.
+        <div class="content">
+            <a class="back-link" href="index.html">&larr; Back to main page</a>
+            <header>
+                <span class="page-eyebrow">Category 20</span>
+                <h1>Field Notes & Experiments: Live Prototyping Log</h1>
+                <p class="tagline">A living log of prototypes, retrospectives, and tactical insights from the Dimenpuzzler lab.</p>
+            </header>
+            <main>
+                <section class="section-card">
+                    <h2>Why this matters</h2>
+                    <p>Not every experiment becomes a thesis—some become lessons. Field Notes documents the messy middle where hypotheses are proven or retired.</p>
+                    <p>We share successes, failures, and the decision data behind each pivot so others can build faster and safer.</p>
+                </section>
 
----
+                <section class="section-card">
+                    <h2>Focus areas</h2>
+                    <ul class="highlight-list">
+                        <li>Sprint recaps with metrics, qualitative feedback, and tooling breakdowns.</li>
+                        <li>Post-mortems that highlight unexpected learning and next iterations.</li>
+                        <li>Open-source resources released for community use and critique.</li>
+                    </ul>
+                    <p class="connections">Connects to: Engineering Virality, Strategic Realities, The AI Revolution.</p>
+                </section>
 
-This detailed outline will guide the content creation for each category, ensuring a cohesive and impactful representation of the user as a Practical AI Civilization Thinker.</p>
-                <p>This section serves as a hub for exploring the core theme: "<em>AI's potential in addressing global issues (climate, social justice), including the "Grand Purification Project."
-*   **Practical Thinker's Angle/Key Message:** AI as a *powerful tool for positive global change, guided by ethical principles and practical strategies*. The user showcases a commitment to leveraging technology for the greater good, exemplified by ambitious initiatives like the "Grand Purification Project."
-*   **Key Content Areas/Potential Post Topics:**
-    *   "AI as a Force for Good: Practical Applications in Solving Humanity's Biggest Challenges."
-    *   "The Grand Purification Project: A Bold Vision for AI-Driven Global Problem-Solving – Feasibility and Ethics."
-    *   "From Code to Climate Action: How AI Can Help Build a Sustainable and Just Future."
-*   **Connections:** Links to Ethical Compass, Civilization's Blueprint, Decentralized Futures.
-
----
-
-This detailed outline will guide the content creation for each category, ensuring a cohesive and impactful representation of the user as a Practical AI Civilization Thinker.</em>" through the lens of actionable insights and pioneering frameworks. We will delve into how these concepts translate into tangible strategies and contribute to the broader vision of a thoughtfully architected AI-driven civilization, always emphasizing the journey from 'Thought' to 'Action'.</p>
-            </section>
-
-            <section class="content-guidance">
-                <h2>Key Exploration Areas & Content Guidance</h2>
-                <p>As you contribute content to this category, consider focusing on the following themes and potential topics, always aiming to embody the 'Practical AI Civilization Thinker' perspective:</p>
-                <ul>
-                    <li>"AI as a Force for Good: Practical Applications in Solving Humanity's Biggest Challenges."</li><li>"The Grand Purification Project: A Bold Vision for AI-Driven Global Problem-Solving – Feasibility and Ethics."</li><li>"From Code to Climate Action: How AI Can Help Build a Sustainable and Just Future."</li><li>**Connections:** Links to Ethical Compass, Civilization's Blueprint, Decentralized Futures.</li><li></li><li>This detailed outline will guide the content creation for each category, ensuring a cohesive and impactful representation of the user as a Practical AI Civilization Thinker.</li>
-                </ul>
-                <h3>Posting Guidelines for This Category:</h3>
-                <ul>
-                    <li><strong>Depth and Practicality:</strong> Ensure each post offers substantial insights and, where possible, actionable takeaways or practical applications related to AI for Humanity: Tackling Global Crises and Building a Better Future.</li>
-                    <li><strong>Connect to Core Philosophies:</strong> Weave in connections to overarching themes like Collapse Theory, Reality Recompiler Protocol (RRP), SynapseWave, the &quot;Love Simulator,&quot; the &quot;Simulated Bestseller,&quot; or the &quot;1 Node, 1 Token&quot; system when relevant to illustrate the practical application of these ideas.</li>
-                    <li><strong>Emphasize 'Thought to Action':</strong> Highlight how theoretical concepts can be, or are being, translated into real-world strategies or projects.</li>
-                    <li><strong>Maintain Consistent Tone:</strong> Write with an insightful, forward-looking, and authoritative voice that inspires thoughtful engagement.</li>
-                    <li><strong>Interlink Content:</strong> Actively link to related discussions in other categories. Key connections for this category include:
-                        <ul>
-                            <li>Ethical Compass, Civilization's Blueprint, Decentralized Futures.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="posts-placeholder">
-                <h2>Posts in AI for Humanity: Tackling Global Crises and Building a Better Future</h2>
-                <p><em>Future articles and explorations related to AI for Humanity: Tackling Global Crises and Building a Better Future will appear here. Your contributions will help build this repository of practical thought, demonstrating how we can architect a more considered and human-centric AI-driven future.</em></p>
-                <!-- Placeholder for actual posts -->
-            </section>
-        </main>
-        <footer class="footer">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Kim Geonyeop (Dimenpuzzler). All Rights Reserved.</p>
-            <p>Exploring practical pathways for an AI-driven civilization.</p>
-        </footer>
+                <section class="section-card placeholder">
+                    <h2>Articles coming soon</h2>
+                    <p>Check back for frequent drops—videos, canvases, and raw notes straight from active experiments.</p>
+                </section>
+            </main>
+            <footer>
+                <p><strong>&copy; <script>document.write(new Date().getFullYear())</script> Kim Geonyeob · Dimenpuzzler</strong></p>
+                <p>Strategic simulations and governance frameworks for a symbiotic AI civilization.</p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
