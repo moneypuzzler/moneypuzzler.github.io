@@ -23,9 +23,7 @@
             --shadow: 0 45px 90px rgba(2, 6, 23, 0.65);
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -126,12 +124,7 @@
             color: var(--text-muted);
         }
 
-        .cta-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
+        .cta-group { display: flex; flex-wrap: wrap; gap: 12px; }
         .cta-group a {
             display: inline-flex;
             align-items: center;
@@ -142,28 +135,18 @@
             text-decoration: none;
             transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
         }
-
         .cta-primary {
             background: linear-gradient(130deg, var(--accent-strong), var(--accent-secondary));
             color: #fff;
             box-shadow: 0 18px 40px rgba(14, 165, 233, 0.4);
         }
-
-        .cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 24px 52px rgba(14, 165, 233, 0.45);
-        }
-
+        .cta-primary:hover { transform: translateY(-3px); box-shadow: 0 24px 52px rgba(14, 165, 233, 0.45); }
         .cta-secondary {
             background: rgba(56, 189, 248, 0.12);
             color: var(--accent);
             border: 1px solid rgba(56, 189, 248, 0.35);
         }
-
-        .cta-secondary:hover {
-            transform: translateY(-3px);
-            background: rgba(56, 189, 248, 0.2);
-        }
+        .cta-secondary:hover { transform: translateY(-3px); background: rgba(56, 189, 248, 0.2); }
 
         .signal-list {
             list-style: none;
@@ -172,7 +155,6 @@
             display: grid;
             gap: 14px;
         }
-
         .signal-list li {
             display: flex;
             flex-direction: column;
@@ -182,24 +164,15 @@
             padding: 14px 16px;
             border: 1px solid rgba(56, 189, 248, 0.16);
         }
-
         .signal-list .label {
             text-transform: uppercase;
             letter-spacing: 0.14em;
             font-size: 0.7rem;
             color: rgba(148, 197, 255, 0.7);
         }
+        .signal-list span:last-child { font-size: 0.98rem; color: var(--text-strong); }
 
-        .signal-list span:last-child {
-            font-size: 0.98rem;
-            color: var(--text-strong);
-        }
-
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(28px, 4vw, 40px);
-        }
+        .main-content { display: flex; flex-direction: column; gap: clamp(28px, 4vw, 40px); }
 
         .panel {
             background: var(--surface);
@@ -210,7 +183,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .panel::before {
             content: '';
             position: absolute;
@@ -219,44 +191,23 @@
             opacity: 0.7;
             pointer-events: none;
         }
-
-        .panel-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            gap: 16px;
-        }
-
-        .panel-header {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
+        .panel-content { position: relative; z-index: 1; display: grid; gap: 16px; }
+        .panel-header { display: flex; flex-direction: column; gap: 10px; }
         .eyebrow {
             text-transform: uppercase;
             letter-spacing: 0.18em;
             font-size: 0.74rem;
             color: rgba(148, 197, 255, 0.7);
         }
+        .panel h2 { margin: 0; font-size: clamp(1.8rem, 3.2vw, 2.2rem); }
+        .panel p { margin: 0; color: var(--text-muted); line-height: 1.7; }
 
-        .panel h2 {
-            margin: 0;
-            font-size: clamp(1.8rem, 3.2vw, 2.2rem);
-        }
-
-        .panel p {
-            margin: 0;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
+        /* Info blocks */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 18px;
         }
-
         .info-block {
             background: rgba(15, 23, 42, 0.65);
             border-radius: 24px;
@@ -267,51 +218,14 @@
             gap: 12px;
             box-shadow: inset 0 0 0 1px rgba(148, 197, 255, 0.08);
         }
+        .info-block h3 { margin: 0; font-size: 1.18rem; color: var(--text-strong); }
+        .info-block p { margin: 0; color: rgba(203, 213, 225, 0.85); line-height: 1.6; }
+        .info-block ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+        .info-block ul li { position: relative; padding-left: 16px; color: rgba(203, 213, 225, 0.78); line-height: 1.5; }
+        .info-block ul li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 
-        .info-block h3 {
-            margin: 0;
-            font-size: 1.18rem;
-            color: var(--text-strong);
-        }
-
-        .info-block p {
-            margin: 0;
-            color: rgba(203, 213, 225, 0.85);
-            line-height: 1.6;
-        }
-
-        .info-block ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: grid;
-            gap: 6px;
-        }
-
-        .info-block ul li {
-            position: relative;
-            padding-left: 16px;
-            color: rgba(203, 213, 225, 0.78);
-            line-height: 1.5;
-        }
-
-        .info-block ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--accent);
-        }
-
-        .signal-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-        }
-
+        /* Cards */
+        .signal-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
         .signal-card {
             position: relative;
             background: rgba(15, 23, 42, 0.65);
@@ -321,169 +235,65 @@
             overflow: hidden;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
-
         .signal-card::after {
             content: attr(data-tag);
             position: absolute;
-            bottom: 16px;
-            right: 22px;
+            bottom: 16px; right: 22px;
             font-size: 0.75rem;
             letter-spacing: 0.18em;
             text-transform: uppercase;
             color: rgba(148, 197, 255, 0.55);
         }
+        .signal-card h3 { margin: 0 0 12px; font-size: 1.28rem; color: var(--text-strong); }
+        .signal-card p { margin: 0 0 20px; color: rgba(203, 213, 225, 0.82); line-height: 1.6; }
+        .signal-card a { position: relative; z-index: 1; color: var(--accent); font-weight: 600; text-decoration: none; }
+        .signal-card:hover { transform: translateY(-6px); border-color: rgba(56, 189, 248, 0.4); }
 
-        .signal-card h3 {
-            margin: 0 0 12px;
-            font-size: 1.28rem;
-            color: var(--text-strong);
-        }
-
-        .signal-card p {
-            margin: 0 0 20px;
-            color: rgba(203, 213, 225, 0.82);
-            line-height: 1.6;
-        }
-
-        .signal-card a {
-            position: relative;
-            z-index: 1;
-            color: var(--accent);
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .signal-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(56, 189, 248, 0.4);
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-        }
-
+        /* Category grid */
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
         .category-grid a {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            position: relative; display: flex; flex-direction: column; gap: 12px;
             background: rgba(15, 23, 42, 0.6);
-            border-radius: 24px;
-            padding: 20px;
+            border-radius: 24px; padding: 20px;
             border: 1px solid rgba(56, 189, 248, 0.16);
-            text-decoration: none;
-            color: var(--text-strong);
+            text-decoration: none; color: var(--text-strong);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
+        .category-grid a:hover { transform: translateY(-6px); border-color: rgba(56, 189, 248, 0.38); }
+        .category-grid .tag { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(148, 197, 255, 0.65); }
+        .category-grid h3 { margin: 0; font-size: 1.2rem; line-height: 1.4; }
+        .category-grid p { margin: 0; color: rgba(203, 213, 225, 0.8); line-height: 1.55; }
 
-        .category-grid a:hover {
-            transform: translateY(-6px);
-            border-color: rgba(56, 189, 248, 0.38);
-        }
-
-        .category-grid .tag {
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: rgba(148, 197, 255, 0.65);
-        }
-
-        .category-grid h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            line-height: 1.4;
-        }
-
-        .category-grid p {
-            margin: 0;
-            color: rgba(203, 213, 225, 0.8);
-            line-height: 1.55;
-        }
-
-        .timeline {
-            display: grid;
-            gap: 16px;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 28px;
-        }
-
+        /* Timeline */
+        .timeline { display: grid; gap: 16px; }
+        .timeline-item { position: relative; padding-left: 28px; }
         .timeline-item::before {
             content: '';
-            position: absolute;
-            left: 8px;
-            top: 6px;
-            bottom: -6px;
-            width: 2px;
+            position: absolute; left: 8px; top: 6px; bottom: -6px; width: 2px;
             background: linear-gradient(180deg, rgba(56, 189, 248, 0.45), rgba(192, 132, 252, 0.2));
         }
-
         .timeline-item::after {
             content: '';
-            position: absolute;
-            left: 0;
-            top: 4px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+            position: absolute; left: 0; top: 4px; width: 12px; height: 12px; border-radius: 50%;
             background: radial-gradient(circle at 50% 50%, var(--accent), rgba(56, 189, 248, 0.1));
             box-shadow: 0 0 14px rgba(56, 189, 248, 0.5);
         }
+        .timeline-item h3 { margin: 0 0 6px; font-size: 1.1rem; }
 
-        .timeline-item h3 {
-            margin: 0 0 6px;
-            font-size: 1.1rem;
-        }
-
-        footer {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            font-size: 0.95rem;
-            color: rgba(226, 232, 240, 0.7);
-        }
-
-        footer strong {
-            color: var(--text-strong);
-        }
+        footer { display: flex; flex-direction: column; gap: 6px; font-size: 0.95rem; color: rgba(226, 232, 240, 0.7); }
+        footer strong { color: var(--text-strong); }
 
         @media (max-width: 980px) {
-            .page-shell {
-                grid-template-columns: 1fr;
-            }
-
-            .profile-card {
-                position: relative;
-            }
+            .page-shell { grid-template-columns: 1fr; }
+            .profile-card { position: relative; }
         }
-
         @media (max-width: 620px) {
-            body {
-                padding: 26px 18px 48px;
-            }
-
-            .profile-card,
-            .panel {
-                border-radius: 24px;
-                padding: 24px;
-            }
-
-            .category-grid,
-            .signal-cards,
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
+            body { padding: 26px 18px 48px; }
+            .profile-card, .panel { border-radius: 24px; padding: 24px; }
+            .category-grid, .signal-cards, .info-grid { grid-template-columns: 1fr; }
         }
-
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation: none !important;
-                transition: none !important;
-            }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
         }
     </style>
 </head>
@@ -514,6 +324,7 @@
                 </ul>
             </div>
         </aside>
+
         <main class="main-content">
             <section class="panel">
                 <div class="panel-content">
@@ -613,106 +424,26 @@
                     </div>
                     <p>각 카테고리는 장기적인 AI 문명 전략의 한 축을 다룹니다. 원하는 영역으로 이동해 상세 노트를 확인하세요.</p>
                     <div class="category-grid">
-                        <a href="category_1.html">
-                            <span class="tag">01</span>
-                            <h3>Foundations of AI</h3>
-                            <p>지능형 시스템의 구조와 해석 가능성을 파헤쳐 문명 레벨의 이해 기반을 마련합니다.</p>
-                        </a>
-                        <a href="category_2.html">
-                            <span class="tag">02</span>
-                            <h3>Human-AI Symbiosis</h3>
-                            <p>AI와 인간의 협업 설계, 공유 거버넌스, 공진화를 위한 윤리적 기준을 다룹니다.</p>
-                        </a>
-                        <a href="category_3.html">
-                            <span class="tag">03</span>
-                            <h3>The Ethical Compass</h3>
-                            <p>AI 거버넌스와 안전성 프레임워크를 실무에 연결하는 방법론을 제시합니다.</p>
-                        </a>
-                        <a href="category_4.html">
-                            <span class="tag">04</span>
-                            <h3>AI-Driven Narratives</h3>
-                            <p>LLM 기반 내러티브 설계와 확장 메타스크립팅 전략을 탐구합니다.</p>
-                        </a>
-                        <a href="category_5.html">
-                            <span class="tag">05</span>
-                            <h3>The Art of Probability</h3>
-                            <p>몬테카를로 기반의 확률적 사고를 전략 수립에 적용하는 기법을 정리합니다.</p>
-                        </a>
-                        <a href="category_6.html">
-                            <span class="tag">06</span>
-                            <h3>Simulating Romance</h3>
-                            <p>관계 형성의 패턴을 확률 모델로 분석해 인간 행동 연구에 새로운 통찰을 제공합니다.</p>
-                        </a>
-                        <a href="category_7.html">
-                            <span class="tag">07</span>
-                            <h3>Engineering Virality</h3>
-                            <p>콘텐츠와 캠페인의 확산을 시뮬레이션하고 시장 임팩트를 예측합니다.</p>
-                        </a>
-                        <a href="category_8.html">
-                            <span class="tag">08</span>
-                            <h3>Macro-Scale Foresight</h3>
-                            <p>경제·정책 시스템을 시뮬레이션해 거시적 변동성을 이해합니다.</p>
-                        </a>
-                        <a href="category_9.html">
-                            <span class="tag">09</span>
-                            <h3>Strategic Realities</h3>
-                            <p>시뮬레이션 기반 전략과 경영 실험을 통해 조직의 미래를 설계합니다.</p>
-                        </a>
-                        <a href="category_10.html">
-                            <span class="tag">10</span>
-                            <h3>Civilization's Blueprint</h3>
-                            <p>장기적 인류 미래를 위한 거시 전략 모델을 구축합니다.</p>
-                        </a>
-                        <a href="category_11.html">
-                            <span class="tag">11</span>
-                            <h3>Dimensional Transition</h3>
-                            <p>새로운 현실 패러다임 전환을 위한 철학적·기술적 프레임워크.</p>
-                        </a>
-                        <a href="category_12.html">
-                            <span class="tag">12</span>
-                            <h3>Reality Recompiler Protocol</h3>
-                            <p>RRP를 통해 현실 데이터를 재조립하고, 정책 실험을 가속합니다.</p>
-                        </a>
-                        <a href="category_13.html">
-                            <span class="tag">13</span>
-                            <h3>SynapseWave Resonance</h3>
-                            <p>공감 기반의 인간-LLM 상호 작용을 위한 신경망 공명 이론.</p>
-                        </a>
-                        <a href="category_14.html">
-                            <span class="tag">14</span>
-                            <h3>AI Power Shift</h3>
-                            <p>AI 협력 시대의 권력 이동을 분석하고 조직 전략을 재설계합니다.</p>
-                        </a>
-                        <a href="category_15.html">
-                            <span class="tag">15</span>
-                            <h3>The Simulated Bestseller</h3>
-                            <p>데이터 기반 이야기 설계로 대중성과 메시지를 동시에 달성합니다.</p>
-                        </a>
-                        <a href="category_16.html">
-                            <span class="tag">16</span>
-                            <h3>Decentralized Futures</h3>
-                            <p>1 Node, 1 Token 비전을 중심으로 분산형 거버넌스를 모델링합니다.</p>
-                        </a>
-                        <a href="category_17.html">
-                            <span class="tag">17</span>
-                            <h3>The AI Revolution</h3>
-                            <p>기술 변곡점을 지도화하고 다음 혁신을 예측합니다.</p>
-                        </a>
-                        <a href="category_18.html">
-                            <span class="tag">18</span>
-                            <h3>Designing New Realities</h3>
-                            <p>월드빌딩 방법론으로 미래 환경을 체계적으로 구축합니다.</p>
-                        </a>
-                        <a href="category_19.html">
-                            <span class="tag">19</span>
-                            <h3>Information Architecture</h3>
-                            <p>지식 공유 프로토콜과 공동 지성 구조를 설계합니다.</p>
-                        </a>
-                        <a href="category_20.html">
-                            <span class="tag">20</span>
-                            <h3>Field Notes & Experiments</h3>
-                            <p>실시간 프로토타이핑과 현장 실험 로그를 기록합니다.</p>
-                        </a>
+                        <a href="category_1.html"><span class="tag">01</span><h3>Foundations of AI</h3><p>지능형 시스템의 구조와 해석 가능성을 파헤쳐 문명 레벨의 이해 기반을 마련합니다.</p></a>
+                        <a href="category_2.html"><span class="tag">02</span><h3>Human-AI Symbiosis</h3><p>AI와 인간의 협업 설계, 공유 거버넌스, 공진화를 위한 윤리적 기준을 다룹니다.</p></a>
+                        <a href="category_3.html"><span class="tag">03</span><h3>The Ethical Compass</h3><p>AI 거버넌스와 안전성 프레임워크를 실무에 연결하는 방법론을 제시합니다.</p></a>
+                        <a href="category_4.html"><span class="tag">04</span><h3>AI-Driven Narratives</h3><p>LLM 기반 내러티브 설계와 확장 메타스크립팅 전략을 탐구합니다.</p></a>
+                        <a href="category_5.html"><span class="tag">05</span><h3>The Art of Probability</h3><p>몬테카를로 기반의 확률적 사고를 전략 수립에 적용하는 기법을 정리합니다.</p></a>
+                        <a href="category_6.html"><span class="tag">06</span><h3>Simulating Romance</h3><p>관계 형성의 패턴을 확률 모델로 분석해 인간 행동 연구에 새로운 통찰을 제공합니다.</p></a>
+                        <a href="category_7.html"><span class="tag">07</span><h3>Engineering Virality</h3><p>콘텐츠와 캠페인의 확산을 시뮬레이션하고 시장 임팩트를 예측합니다.</p></a>
+                        <a href="category_8.html"><span class="tag">08</span><h3>Macro-Scale Foresight</h3><p>경제·정책 시스템을 시뮬레이션해 거시적 변동성을 이해합니다.</p></a>
+                        <a href="category_9.html"><span class="tag">09</span><h3>Strategic Realities</h3><p>시뮬레이션 기반 전략과 경영 실험을 통해 조직의 미래를 설계합니다.</p></a>
+                        <a href="category_10.html"><span class="tag">10</span><h3>Civilization's Blueprint</h3><p>장기적 인류 미래를 위한 거시 전략 모델을 구축합니다.</p></a>
+                        <a href="category_11.html"><span class="tag">11</span><h3>Dimensional Transition</h3><p>새로운 현실 패러다임 전환을 위한 철학적·기술적 프레임워크.</p></a>
+                        <a href="category_12.html"><span class="tag">12</span><h3>Reality Recompiler Protocol</h3><p>RRP를 통해 현실 데이터를 재조립하고, 정책 실험을 가속합니다.</p></a>
+                        <a href="category_13.html"><span class="tag">13</span><h3>SynapseWave Resonance</h3><p>공감 기반의 인간-LLM 상호 작용을 위한 신경망 공명 이론.</p></a>
+                        <a href="category_14.html"><span class="tag">14</span><h3>AI Power Shift</h3><p>AI 협력 시대의 권력 이동을 분석하고 조직 전략을 재설계합니다.</p></a>
+                        <a href="category_15.html"><span class="tag">15</span><h3>The Simulated Bestseller</h3><p>데이터 기반 이야기 설계로 대중성과 메시지를 동시에 달성합니다.</p></a>
+                        <a href="category_16.html"><span class="tag">16</span><h3>Decentralized Futures</h3><p>1 Node, 1 Token 비전을 중심으로 분산형 거버넌스를 모델링합니다.</p></a>
+                        <a href="category_17.html"><span class="tag">17</span><h3>The AI Revolution</h3><p>기술 변곡점을 지도화하고 다음 혁신을 예측합니다.</p></a>
+                        <a href="category_18.html"><span class="tag">18</span><h3>Designing New Realities</h3><p>월드빌딩 방법론으로 미래 환경을 체계적으로 구축합니다.</p></a>
+                        <a href="category_19.html"><span class="tag">19</span><h3>Information Architecture</h3><p>지식 공유 프로토콜과 공동 지성 구조를 설계합니다.</p></a>
+                        <a href="category_20.html"><span class="tag">20</span><h3>Field Notes & Experiments</h3><p>실시간 프로토타이핑과 현장 실험 로그를 기록합니다.</p></a>
                     </div>
                 </div>
             </section>
