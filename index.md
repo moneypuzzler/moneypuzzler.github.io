@@ -105,17 +105,3 @@ AI 키오스크와 POS, 통합 공기질 관리 시스템 등
 ---
 
 © 2025 **MoneyPuzzler / GRIT Corporation**
-
-🔍 정리 요약
-
-추상적인 키워드(TEL-5, 1인1노드 등) 제거 → 실물 중심 스토리 유지
-
-현재 포지션: GRIT CAIO (Chief AI Innovation Officer)
-
-현재 활동:
-① TERVYX Protocol (데이터 신뢰 표준화)
-② 『Complex Layer』 집필 중
-
-과거 실적: KT×오키로키친 DX 협약 사례 포함
-
-톤: bilingual business professional (한·영 병기, 글로벌 파트너십 대응형)
